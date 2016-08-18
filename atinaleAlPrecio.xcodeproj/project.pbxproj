@@ -14,6 +14,10 @@
 		B91773B81D58F2010018B68B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91773B61D58F2010018B68B /* LaunchScreen.storyboard */; };
 		B91773C31D58F2010018B68B /* atinaleAlPrecioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91773C21D58F2010018B68B /* atinaleAlPrecioTests.swift */; };
 		B91773CE1D58F2010018B68B /* atinaleAlPrecioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91773CD1D58F2010018B68B /* atinaleAlPrecioUITests.swift */; };
+		B91773DC1D594BDD0018B68B /* AtinarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91773DB1D594BDD0018B68B /* AtinarViewController.swift */; };
+		B96849601D63F4150065B3F6 /* cronometro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B968495F1D63F4150065B3F6 /* cronometro.swift */; };
+		B96849621D6420E90065B3F6 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96849611D6420E80065B3F6 /* KDCircularProgress.swift */; };
+		B97867C91D655056004523ED /* rightOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97867C81D655056004523ED /* rightOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		B91773C91D58F2010018B68B /* atinaleAlPrecioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = atinaleAlPrecioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91773CD1D58F2010018B68B /* atinaleAlPrecioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atinaleAlPrecioUITests.swift; sourceTree = "<group>"; };
 		B91773CF1D58F2010018B68B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B91773DB1D594BDD0018B68B /* AtinarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtinarViewController.swift; sourceTree = "<group>"; };
+		B968495F1D63F4150065B3F6 /* cronometro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cronometro.swift; sourceTree = "<group>"; };
+		B96849611D6420E80065B3F6 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		B97867C81D655056004523ED /* rightOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rightOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +107,11 @@
 			children = (
 				B91773AD1D58F2010018B68B /* AppDelegate.swift */,
 				B91773AF1D58F2010018B68B /* ViewController.swift */,
+				B91773DB1D594BDD0018B68B /* AtinarViewController.swift */,
+				B96849611D6420E80065B3F6 /* KDCircularProgress.swift */,
+				B968495F1D63F4150065B3F6 /* cronometro.swift */,
 				B91773B11D58F2010018B68B /* Main.storyboard */,
+				B97867C81D655056004523ED /* rightOrderViewController.swift */,
 				B91773B41D58F2010018B68B /* Assets.xcassets */,
 				B91773B61D58F2010018B68B /* LaunchScreen.storyboard */,
 				B91773B91D58F2010018B68B /* Info.plist */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91773DC1D594BDD0018B68B /* AtinarViewController.swift in Sources */,
+				B96849621D6420E90065B3F6 /* KDCircularProgress.swift in Sources */,
+				B97867C91D655056004523ED /* rightOrderViewController.swift in Sources */,
 				B91773B01D58F2010018B68B /* ViewController.swift in Sources */,
 				B91773AE1D58F2010018B68B /* AppDelegate.swift in Sources */,
+				B96849601D63F4150065B3F6 /* cronometro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +503,7 @@
 				B91773D41D58F2010018B68B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B91773D51D58F2010018B68B /* Build configuration list for PBXNativeTarget "atinaleAlPrecioTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +512,7 @@
 				B91773D71D58F2010018B68B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B91773D81D58F2010018B68B /* Build configuration list for PBXNativeTarget "atinaleAlPrecioUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +521,7 @@
 				B91773DA1D58F2010018B68B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
