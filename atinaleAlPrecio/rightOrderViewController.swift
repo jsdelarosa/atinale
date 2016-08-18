@@ -20,11 +20,13 @@ class rightOrderViewController: UIViewController {
     @IBOutlet weak var rightAnswer1: UITextField!
     @IBOutlet weak var rightAnswer2: UITextField!
     @IBOutlet weak var rightAnswer3: UITextField!
+    @IBOutlet weak var firstAnswerVerifier: UILabel!
+    @IBOutlet weak var secondAnswerVerifier: UILabel!
+    @IBOutlet weak var thirdAnswerVerifier: UILabel!
     
     var priceOne = "$19.00"
     var priceTwo = "$50.00"
     var priceThree = "$100.00"
-    
     
     
     override func viewDidLoad() {
@@ -33,29 +35,51 @@ class rightOrderViewController: UIViewController {
         price2.text = priceTwo
         price3.text = priceThree
         
-        rightAnswer1.text = "a"
-        rightAnswer2.text = "b"
-        rightAnswer3.text = "c"
+        rightAnswer1.text = "1"
+        rightAnswer2.text = "2"
+        rightAnswer3.text = "3"
         
         userAnswer2.hidden = true
         userAnswer3.hidden = true
     }
 
     @IBAction func respuesta(sender: AnyObject) {
-        revisar()
-    }
- 
-    func revisar() {
-        if userAnswer1 == rightAnswer1 {
-            userAnswer1.text = "\(userAnswer1)" + " Correcto"
+        
+        rightAnswer1.backgroundColor = UIColor.whiteColor()
+        
+        let a:Int = Int(rightAnswer1.text!)!
+        let b:Int = Int(userAnswer1.text!)!
+        
+        if a == b {
             userAnswer2.hidden = false
-            print(rightAnswer1)
-            print(userAnswer1)
-        } else {
-            userAnswer1.text = "\(userAnswer1)" + " Incorrecto"
-            print(rightAnswer1, "incorrecto")
-            print(userAnswer1)
+
         }
     }
+
+    @IBAction func respuesta2(sender: AnyObject) {
+        rightAnswer2.backgroundColor = UIColor.whiteColor()
+        
+        let c:Int = Int(rightAnswer2.text!)!
+        let d:Int = Int(userAnswer2.text!)!
+        
+        if c == d {
+            userAnswer3.hidden = false
+
+            
+        }
+    }
+    
+    @IBAction func respuesta3(sender: AnyObject) {
+        rightAnswer3.backgroundColor = UIColor.whiteColor()
+        
+        let e:Int = Int(rightAnswer3.text!)!
+        let f:Int = Int(userAnswer3.text!)!
+        
+        if e == f {
+
+        }
+        
+    }
+    
     
 }

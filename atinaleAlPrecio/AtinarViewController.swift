@@ -16,7 +16,7 @@ class AtinarViewController: UIViewController {
     @IBOutlet weak var Participante3: UITextField!
     @IBOutlet weak var precio: UITextField!
     
-    var a = 150
+    var a = 150.00
     
     
     override func viewDidLoad() {
@@ -26,40 +26,56 @@ class AtinarViewController: UIViewController {
     }
     
     @IBAction func revelarPrecio(sender: AnyObject) {
-        precio.text = ("$" + "\(a)" + ".00")
-       // print("$","\(a)",".00")
-        precio.font = precio.font?.fontWithSize(100)
         
-        correct()
+        verify()
      }
     
-    func correct() {
-        let b:Int = Int(Participante1.text!)!
-        let c:Int = Int(Participante2.text!)!
-        let d:Int = Int(Participante3.text!)!
+    func verify() {
+        let b:Double = Double(Participante1.text!)!
+        let c:Double = Double(Participante2.text!)!
+        let d:Double = Double(Participante3.text!)!
 
         let e = abs(a - b)
         let f = abs(a - c)
         let g = abs(a - d)
         
-            if (e < f) && (e < g) && (b <= a) || (b <= a) && (c > a) && (d > a) || (e < g) && (c > a) || (e < f) && (d > a){
-                Participante1.text = ("Respuesta Correcta: " + "\(b)" )
+        if ((b > a) && (c > a) && (d > a)){
+            Participante1.text = ("🙄")
+            Participante2.text = ("🙄")
+            Participante3.text = ("🙄")
+            
+            let alertController = UIAlertController(title: "🤔", message:
+                "Todos se pasaron", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Reintentar", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        } else if ((e == f) && (e == g) && (g == f))  {
+            Participante1.text = ("🤔")
+            Participante2.text = ("🤔")
+            Participante3.text = ("🤔")
+        }
+        else if (e < f) && (e < g) && (b <= a) || (b <= a) && (c > a) && (d > a) || (e < g) && (c > a) || (e < f) && (d > a){
+                Participante1.text = ("Ganador: " + "\(b)" + "0" )
                 Participante1.textColor = UIColor.orangeColor()
+            precio.text = ("$" + "\(a)"+"0")
+            precio.font = precio.font?.fontWithSize(100)
+
                 } else if (f < e) && (f < g) && (c <= a) || (b > a) && (c <= a) && (d > a) || (f < e) && (d > a) || (f < g) && (b > a){
-                    Participante2.text = ("Respuesta Correcta: " + "\(c)" )
+                    Participante2.text = ("Ganador: " + "\(c)" + "0" )
                     Participante2.textColor = UIColor.orangeColor()
+            precio.text = ("$" + "\(a)"+"0")
+            precio.font = precio.font?.fontWithSize(100)
+
                     } else if (g < e) && (g < f) && (d <= a) || (b > a) && (c > a) && (d <= a) || (g < f) && (b > a) || (g < e) && (c > a) {
-                        Participante3.text = ("Respuesta Correcta: " + "\(d)" )
+                        Participante3.text = ("Ganador: " + "\(d)" + "0")
                         Participante3.textColor = UIColor.orangeColor()
+            precio.text = ("$" + "\(a)"+"0")
+            precio.font = precio.font?.fontWithSize(100)
+
                     }
         
         print(e, f, g)
-
-        if ((b > a) && (c > a) && (d > a)){
-            Participante1.text = ("X")
-            Participante2.text = ("X")
-            Participante3.text = ("X")
-        }
+        
     }
     
     
