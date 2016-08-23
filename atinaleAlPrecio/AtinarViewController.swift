@@ -16,8 +16,7 @@ class AtinarViewController: UIViewController {
     @IBOutlet weak var Participante3: UITextField!
     @IBOutlet weak var precio: UITextField!
     
-    var a = 150.00
-    
+    var a = constants.atinar.precio
     
     override func viewDidLoad() {
         Participante1.text = ("00.00")

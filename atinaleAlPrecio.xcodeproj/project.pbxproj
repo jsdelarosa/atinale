@@ -19,6 +19,8 @@
 		B96849621D6420E90065B3F6 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96849611D6420E80065B3F6 /* KDCircularProgress.swift */; };
 		B97867C91D655056004523ED /* rightOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97867C81D655056004523ED /* rightOrderViewController.swift */; };
 		B988DFB81D6B623D0022C240 /* moreOrLessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */; };
+		B988DFBA1D6BD0340022C240 /* swapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFB91D6BD0340022C240 /* swapViewController.swift */; };
+		B988DFBC1D6BE22C0022C240 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFBB1D6BE22C0022C240 /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		B96849611D6420E80065B3F6 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
 		B97867C81D655056004523ED /* rightOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rightOrderViewController.swift; sourceTree = "<group>"; };
 		B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreOrLessViewController.swift; sourceTree = "<group>"; };
+		B988DFB91D6BD0340022C240 /* swapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swapViewController.swift; sourceTree = "<group>"; };
+		B988DFBB1D6BE22C0022C240 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				B96849611D6420E80065B3F6 /* KDCircularProgress.swift */,
 				B968495F1D63F4150065B3F6 /* cronometro.swift */,
 				B91773B11D58F2010018B68B /* Main.storyboard */,
+				B988DFBB1D6BE22C0022C240 /* constants.swift */,
+				B988DFB91D6BD0340022C240 /* swapViewController.swift */,
 				B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */,
 				B97867C81D655056004523ED /* rightOrderViewController.swift */,
 				B91773B41D58F2010018B68B /* Assets.xcassets */,
@@ -276,9 +282,11 @@
 			files = (
 				B91773DC1D594BDD0018B68B /* AtinarViewController.swift in Sources */,
 				B96849621D6420E90065B3F6 /* KDCircularProgress.swift in Sources */,
+				B988DFBC1D6BE22C0022C240 /* constants.swift in Sources */,
 				B97867C91D655056004523ED /* rightOrderViewController.swift in Sources */,
 				B988DFB81D6B623D0022C240 /* moreOrLessViewController.swift in Sources */,
 				B91773B01D58F2010018B68B /* ViewController.swift in Sources */,
+				B988DFBA1D6BD0340022C240 /* swapViewController.swift in Sources */,
 				B91773AE1D58F2010018B68B /* AppDelegate.swift in Sources */,
 				B96849601D63F4150065B3F6 /* cronometro.swift in Sources */,
 			);

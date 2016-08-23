@@ -21,13 +21,13 @@ class rightOrderViewController: UIViewController {
     @IBOutlet weak var secondAnswerVerifier: UILabel!
     @IBOutlet weak var thirdAnswerVerifier: UILabel!
     
-    var priceOne = "$19.00"
-    var priceTwo = "$50.00"
-    var priceThree = "$100.00"
+    var priceOne = constants.rightOrder.price1
+    var priceTwo = constants.rightOrder.price2
+    var priceThree = constants.rightOrder.price3
     
-    var rightAnswer1 = 1
-    var rightAnswer2 = 2
-    var rightAnswer3 = 3
+    var rightAnswer1 = constants.rightOrder.rightAnswerOne
+    var rightAnswer2 = constants.rightOrder.rightAnswerTwo
+    var rightAnswer3 = constants.rightOrder.rightAnswerThree
     var d:Bool = false
     var e:Bool = false
     var f:Bool = false

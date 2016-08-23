@@ -20,12 +20,12 @@ class moreOrLessViewController: UIViewController {
     @IBOutlet weak var mas3: UIButton!
     @IBOutlet weak var menos3: UIButton!
     
-    var precioReal1 = 150
-    var precioReal2 = 200
-    var precioReal3 = 500
-    var precioEtiqueta1 = 120
-    var precioEtiqueta2 = 220
-    var precioEtiqueta3 = 490
+    var precioReal1 = constants.moreOrLess.real1
+    var precioReal2 = constants.moreOrLess.real2
+    var precioReal3 = constants.moreOrLess.real3
+    var precioEtiqueta1 = constants.moreOrLess.etiqueta1
+    var precioEtiqueta2 = constants.moreOrLess.etiqueta2
+    var precioEtiqueta3 = constants.moreOrLess.etiqueta3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class moreOrLessViewController: UIViewController {
         menos2.hidden = true
         mas3.hidden = true
         menos3.hidden = true
-        status.text = "🙃"
+        status.text = "😎"
         
     }
     
