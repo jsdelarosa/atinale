@@ -15,8 +15,12 @@ class AtinarViewController: UIViewController {
     @IBOutlet weak var Participante2: UITextField!
     @IBOutlet weak var Participante3: UITextField!
     @IBOutlet weak var precio: UITextField!
+    @IBOutlet weak var roundLabel: UILabel!
     
-    var a = constants.atinar.precio
+    
+    var a = 0.0
+    var contadorRound = 0
+    
     
     override func viewDidLoad() {
         Participante1.text = ("00.00")
@@ -24,8 +28,41 @@ class AtinarViewController: UIViewController {
         Participante3.text = ("00.00")
     }
     
-    @IBAction func revelarPrecio(sender: AnyObject) {
+    override func viewWillAppear(animated: Bool) {
+        Participante1.text = ("00.00")
+        Participante2.text = ("00.00")
+        Participante3.text = ("00.00")
+        Participante1.textColor = UIColor.blackColor()
+        Participante2.textColor = UIColor.blackColor()
+        Participante3.textColor = UIColor.blackColor()
+        precio.font = precio.font?.fontWithSize(45)
+        precio.text = ("Atínale al precio")
         
+        contadorRound += 1
+        roundLabel.text = "Round: " + "\(contadorRound)"
+    }
+    
+    func roundNumber(numero: Int) -> Double{
+        var z: Double
+        
+        if numero == 1 {
+            z = constants.atinar.precio1
+        } else if numero == 2 {
+            z = constants.atinar.precio2
+        } else if numero == 3{
+            z = constants.atinar.precio3
+        } else if numero == 4{
+            z = constants.atinar.precio4
+        } else {
+            z = 100
+        }
+        
+        print(z)
+        return z
+    }
+    
+    @IBAction func revelarPrecio(sender: AnyObject) {
+        a = roundNumber(contadorRound)
         verify()
      }
     
@@ -73,7 +110,7 @@ class AtinarViewController: UIViewController {
 
                     }
         
-        print(e, f, g)
+      //  print(e, f, g)
         
     }
     

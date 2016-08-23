@@ -11,7 +11,10 @@ import Foundation
 struct constants {
     
     struct atinar {
-        static let precio = 150.00
+        static let precio1 = 150.00
+        static let precio2 = 250.00
+        static let precio3 = 500.00
+        static let precio4 = 300.00
     }
     
     struct moreOrLess {
