@@ -23,6 +23,8 @@ class AtinarViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        configureBackground()
+        
         Participante1.text = ("00.00")
         Participante2.text = ("00.00")
         Participante3.text = ("00.00")
@@ -113,46 +115,17 @@ class AtinarViewController: UIViewController {
       //  print(e, f, g)
         
     }
+}
+
+extension AtinarViewController {
     
-    
-    
-    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
-        let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as!NSValue
-        return keyboardSize.CGRectValue().height
+    private func configureBackground() {
+        let backgroundGradient = CAGradientLayer()
+        let colorTop = UIColor(red: 0.345, green: 0.839, blue: 0.988, alpha: 1.0).CGColor
+        let colorBottom = UIColor(red: 0.023, green: 0.569, blue: 0.910, alpha: 1.0).CGColor
+        backgroundGradient.colors = [colorTop, colorBottom]
+        backgroundGradient.locations = [0.0, 1.0]
+        backgroundGradient.frame = view.frame
+        view.layer.insertSublayer(backgroundGradient, atIndex: 0)
     }
-    
-    //Moves the view when the kb covers the text field
-    func keyboardWillShow(notification: NSNotification) {
-        if Participante3.isFirstResponder() {
-            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
-        }
-    }
-    
-    //Returns the view when keyboard dismisses
-    func keyboardWillHide(notification: NSNotification) {
-        if Participante3.isFirstResponder() {
-            view.frame.origin.y = 0
-        }
-    }
-    
-    //Subscribe & Unsubscribe from Keyboard Notifications
-    func subscribeToKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-    }
-    
-    func unsubscribeFromKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
-    }
-    
-    
-    func subsbscribeToKeyboardHideNotification() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
-    func unsubscribeToKeyboardHideNotification() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
-    }
-    
-    
 }

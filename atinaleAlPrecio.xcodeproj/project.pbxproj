@@ -21,6 +21,7 @@
 		B988DFB81D6B623D0022C240 /* moreOrLessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */; };
 		B988DFBA1D6BD0340022C240 /* swapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFB91D6BD0340022C240 /* swapViewController.swift */; };
 		B988DFBC1D6BE22C0022C240 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFBB1D6BE22C0022C240 /* constants.swift */; };
+		B988DFC11D6F67980022C240 /* Rollmops.otf in Resources */ = {isa = PBXBuildFile; fileRef = B988DFBF1D6F64EF0022C240 /* Rollmops.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreOrLessViewController.swift; sourceTree = "<group>"; };
 		B988DFB91D6BD0340022C240 /* swapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swapViewController.swift; sourceTree = "<group>"; };
 		B988DFBB1D6BE22C0022C240 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		B988DFBF1D6F64EF0022C240 /* Rollmops.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rollmops.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				B91773B41D58F2010018B68B /* Assets.xcassets */,
 				B91773B61D58F2010018B68B /* LaunchScreen.storyboard */,
 				B91773B91D58F2010018B68B /* Info.plist */,
+				B988DFC01D6F65090022C240 /* Resources */,
 			);
 			path = atinaleAlPrecio;
 			sourceTree = "<group>";
@@ -144,6 +147,14 @@
 				B91773CF1D58F2010018B68B /* Info.plist */,
 			);
 			path = atinaleAlPrecioUITests;
+			sourceTree = "<group>";
+		};
+		B988DFC01D6F65090022C240 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B988DFBF1D6F64EF0022C240 /* Rollmops.otf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B988DFC11D6F67980022C240 /* Rollmops.otf in Resources */,
 				B91773B81D58F2010018B68B /* LaunchScreen.storyboard in Resources */,
 				B91773B51D58F2010018B68B /* Assets.xcassets in Resources */,
 				B91773B31D58F2010018B68B /* Main.storyboard in Resources */,

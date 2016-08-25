@@ -34,4 +34,11 @@ struct constants {
         static let rightAnswerTwo = 2
         static let rightAnswerThree = 3
     }
+    
+    struct swap {
+        static let precioOne = 150
+        static let precioTwo = 300
+        static let rightAnswerOne = 300
+        static let rightAnswerTwo = 150
+    }
 }
