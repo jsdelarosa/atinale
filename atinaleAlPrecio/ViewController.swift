@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         configureBackground()
         
-        for family: String in UIFont.familyNames()
+       /*
+         
+         for family: String in UIFont.familyNames()
         {
             print("\(family)")
             for names: String in UIFont.fontNamesForFamilyName(family)
@@ -23,6 +25,9 @@ class ViewController: UIViewController {
                 print("== \(names)")
             }
         }
+         
+        */
+        
     }
 
     override func didReceiveMemoryWarning() {

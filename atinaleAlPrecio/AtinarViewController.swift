@@ -16,24 +16,26 @@ class AtinarViewController: UIViewController {
     @IBOutlet weak var Participante3: UITextField!
     @IBOutlet weak var precio: UITextField!
     @IBOutlet weak var roundLabel: UILabel!
-    
+    @IBOutlet weak var BotonNext: UIButton!
     
     var a = 0.0
     var contadorRound = 0
     
-    
     override func viewDidLoad() {
         configureBackground()
+        BotonNext.hidden = true
+        BotonNext.layer.cornerRadius = 5
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        Participante1.center.x -= view.bounds.width
+        Participante2.center.x -= view.bounds.width
+        Participante3.center.x -= view.bounds.width
         
         Participante1.text = ("00.00")
         Participante2.text = ("00.00")
         Participante3.text = ("00.00")
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        Participante1.text = ("00.00")
-        Participante2.text = ("00.00")
-        Participante3.text = ("00.00")
+        
         Participante1.textColor = UIColor.blackColor()
         Participante2.textColor = UIColor.blackColor()
         Participante3.textColor = UIColor.blackColor()
@@ -41,8 +43,26 @@ class AtinarViewController: UIViewController {
         precio.text = ("Atínale al precio")
         
         contadorRound += 1
-        roundLabel.text = "Round: " + "\(contadorRound)"
+        roundLabel.text = "\(contadorRound)"
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        UIView.animateWithDuration(1, delay: 0.4,
+        options: [], animations: {
+            self.Participante1.center.x += self.view.bounds.width}
+        , completion: nil)
+        
+        UIView.animateWithDuration(1.5, delay: 0.3, options: [], animations: {
+            self.Participante2.center.x += self.view.bounds.width}
+        , completion: nil)
+        
+        UIView.animateWithDuration(2, delay: 0.2, options: [], animations: {
+            self.Participante3.center.x += self.view.bounds.width}
+        , completion: nil)
+        
+        
+    }
+    
     
     func roundNumber(numero: Int) -> Double{
         var z: Double
@@ -93,26 +113,29 @@ class AtinarViewController: UIViewController {
             Participante3.text = ("🤔")
         }
         else if (e < f) && (e < g) && (b <= a) || (b <= a) && (c > a) && (d > a) || (e < g) && (c > a) || (e < f) && (d > a){
-                Participante1.text = ("Ganador: " + "\(b)" + "0" )
-                Participante1.textColor = UIColor.orangeColor()
+                Participante1.text = ("\(b)" + "0" + " Ganador")
+                Participante1.textColor = UIColor.init(colorLiteralRed: 0.55, green: 0.00, blue: 0.49, alpha: 1.0)
             precio.text = ("$" + "\(a)"+"0")
             precio.font = precio.font?.fontWithSize(100)
+            BotonNext.hidden = false
 
                 } else if (f < e) && (f < g) && (c <= a) || (b > a) && (c <= a) && (d > a) || (f < e) && (d > a) || (f < g) && (b > a){
-                    Participante2.text = ("Ganador: " + "\(c)" + "0" )
-                    Participante2.textColor = UIColor.orangeColor()
+                    Participante2.text = ("\(c)" + "0" + " Ganador")
+                    Participante2.textColor = UIColor.init(colorLiteralRed: 0.55, green: 0.00, blue: 0.49, alpha: 1.0)
             precio.text = ("$" + "\(a)"+"0")
             precio.font = precio.font?.fontWithSize(100)
-
+            BotonNext.hidden = false
+            
                     } else if (g < e) && (g < f) && (d <= a) || (b > a) && (c > a) && (d <= a) || (g < f) && (b > a) || (g < e) && (c > a) {
-                        Participante3.text = ("Ganador: " + "\(d)" + "0")
-                        Participante3.textColor = UIColor.orangeColor()
+                        Participante3.text = ("\(d)" + "0" + " Ganador")
+                        Participante3.textColor = UIColor.init(colorLiteralRed: 0.55, green: 0.00, blue: 0.49, alpha: 1.0)
             precio.text = ("$" + "\(a)"+"0")
             precio.font = precio.font?.fontWithSize(100)
+            BotonNext.hidden = false
 
                     }
         
-      //  print(e, f, g)
+        print(e, f, g)
         
     }
 }
@@ -121,8 +144,8 @@ extension AtinarViewController {
     
     private func configureBackground() {
         let backgroundGradient = CAGradientLayer()
-        let colorTop = UIColor(red: 0.345, green: 0.839, blue: 0.988, alpha: 1.0).CGColor
-        let colorBottom = UIColor(red: 0.023, green: 0.569, blue: 0.910, alpha: 1.0).CGColor
+        let colorTop = UIColor(red: 0.96, green: 0.00, blue: 0.35, alpha: 1.0).CGColor
+        let colorBottom = UIColor(red: 0.55, green: 0.00, blue: 0.49, alpha: 1.0).CGColor
         backgroundGradient.colors = [colorTop, colorBottom]
         backgroundGradient.locations = [0.0, 1.0]
         backgroundGradient.frame = view.frame
