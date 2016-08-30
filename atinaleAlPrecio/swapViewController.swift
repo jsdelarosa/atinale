@@ -18,13 +18,24 @@ class swapViewController: UIViewController {
     @IBOutlet weak var precio2: UILabel!
     @IBOutlet weak var precioCambiado1: UILabel!
     @IBOutlet weak var precioCambiado2: UILabel!
+    @IBOutlet weak var botonCambiar: UIButton!
+    @IBOutlet weak var botonRevelar: UIButton!
+    
+    var flag = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureBackground()
+        
         precio1.text = "$" + "\(constants.swap.precioOne)" + ".00"
         precio2.text = "$" + "\(constants.swap.precioTwo)" + ".00"
         precioCambiado1.hidden = true
         precioCambiado2.hidden = true
+        
+        botonCambiar.layer.cornerRadius = 5
+        botonRevelar.layer.cornerRadius = 5
     }
     
     
@@ -35,37 +46,50 @@ class swapViewController: UIViewController {
         precioCambiado1.text = "$" + "\(constants.swap.precioTwo)" + ".00"
         precioCambiado2.text = "$" + "\(constants.swap.precioOne)" + ".00"
         
-    }
-    
-    func evaluar() -> Bool{
-        if constants.swap.precioOne == constants.swap.rightAnswerOne || constants.swap.precioTwo == constants.swap.rightAnswerTwo {
-            return true
-        } else if constants.swap.precioOne == constants.swap.rightAnswerTwo || constants.swap.precioTwo == constants.swap.rightAnswerOne {
-            return false
-        } else {
-            return false
-        }
-        
-        
-        
+        flag = 1
     }
     
     
-    func action(x: Bool)  {
-        if x == true{
-            precioCambiado1.text = "Correcto 😬"
-            precioCambiado2.text = "Coreccto 😬"
-        } else {
-            precioCambiado1.text = "Incorrecto ☹️"
-            precioCambiado2.text = "Incorrecto ☹️"
-        }
-    }
 
     @IBAction func revelar(sender: AnyObject) {
-        let answer = evaluar()
-        action(answer)
-
+        
+        if flag == 0 {
+            
+            print(constants.swap.precioOne, constants.swap.rightAnswerOne)
+            precioCambiado1.hidden = false
+            precioCambiado2.hidden = false
+            
+            if (constants.swap.precioOne == constants.swap.rightAnswerOne && constants.swap.precioTwo == constants.swap.rightAnswerTwo) {
+                precioCambiado1.text = "Correcto 😁"
+                precioCambiado2.text = "Correcto 😁"
+            } else {
+                precioCambiado1.text = "Incorrecto ☹️"
+                precioCambiado2.text = "Incorrecto ☹️"
+            }
+        }
+        
+        else {
+            if (constants.swap.precioOne == constants.swap.rightAnswerTwo && constants.swap.precioTwo == constants.swap.rightAnswerOne) {
+                precio1.text = "Correcto 😁"
+                precio2.text = "Correcto 😁"
+            } else {
+                precio1.text = "Incorrecto ☹️"
+                precio2.text = "Incorrecto ☹️"
+            }
+        }
     }
+}
+
+//Configure UI
+extension swapViewController {
     
-    
+    private func configureBackground() {
+        let backgroundGradient = CAGradientLayer()
+        let colorTop = UIColor(red: 0.345, green: 0.839, blue: 0.988, alpha: 1.0).CGColor
+        let colorBottom = UIColor(red: 0.023, green: 0.569, blue: 0.910, alpha: 1.0).CGColor
+        backgroundGradient.colors = [colorTop, colorBottom]
+        backgroundGradient.locations = [0.0, 1.0]
+        backgroundGradient.frame = view.frame
+        view.layer.insertSublayer(backgroundGradient, atIndex: 0)
+    }
 }

@@ -17,13 +17,14 @@ class AtinarViewController: UIViewController {
     @IBOutlet weak var precio: UITextField!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var BotonNext: UIButton!
+    @IBOutlet weak var priceIsRightLogo: UIImageView!
     
     var a = 0.0
     var contadorRound = 0
     
     override func viewDidLoad() {
         configureBackground()
-        BotonNext.hidden = true
+      //  BotonNext.hidden = true
         BotonNext.layer.cornerRadius = 5
     }
     
@@ -44,6 +45,8 @@ class AtinarViewController: UIViewController {
         
         contadorRound += 1
         roundLabel.text = "\(contadorRound)"
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -59,7 +62,6 @@ class AtinarViewController: UIViewController {
         UIView.animateWithDuration(2, delay: 0.2, options: [], animations: {
             self.Participante3.center.x += self.view.bounds.width}
         , completion: nil)
-        
         
     }
     
@@ -134,10 +136,8 @@ class AtinarViewController: UIViewController {
             BotonNext.hidden = false
 
                     }
-        
-        print(e, f, g)
-        
     }
+
 }
 
 extension AtinarViewController {

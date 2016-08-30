@@ -20,6 +20,7 @@ class rightOrderViewController: UIViewController {
     @IBOutlet weak var firstAnswerVerifier: UILabel!
     @IBOutlet weak var secondAnswerVerifier: UILabel!
     @IBOutlet weak var thirdAnswerVerifier: UILabel!
+    @IBOutlet weak var revelarBoton: UIButton!
     
     var priceOne = constants.rightOrder.price1
     var priceTwo = constants.rightOrder.price2
@@ -35,9 +36,14 @@ class rightOrderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureBackground()
+        
         price1.text = priceOne
         price2.text = priceTwo
         price3.text = priceThree
+        
+        revelarBoton.layer.cornerRadius = 5
     }
 
     @IBAction func respuesta(sender: AnyObject) {
@@ -66,7 +72,7 @@ class rightOrderViewController: UIViewController {
     }
     
     func compare() {
-        if flag <= 2 {
+        if flag < 3 {
             
             if d == true || e == true || f == true {
                 firstAnswerVerifier.text = "🏆"
@@ -79,13 +85,32 @@ class rightOrderViewController: UIViewController {
                 firstAnswerVerifier.text = "🏆"
                 secondAnswerVerifier.text = "🏆"
                 thirdAnswerVerifier.text = "🏆"
+                
+                userAnswer1.userInteractionEnabled = false
+                userAnswer2.userInteractionEnabled = false
+                userAnswer3.userInteractionEnabled = false
             }
+            
+
+            
         } else{
             firstAnswerVerifier.text = "❌"
             secondAnswerVerifier.text = "❌"
             thirdAnswerVerifier.text = "❌"
         }
-        
     }
+}
 
+//Configure UI
+extension rightOrderViewController {
+    
+    private func configureBackground() {
+        let backgroundGradient = CAGradientLayer()
+        let colorTop = UIColor(red: 0.345, green: 0.839, blue: 0.988, alpha: 1.0).CGColor
+        let colorBottom = UIColor(red: 0.023, green: 0.569, blue: 0.910, alpha: 1.0).CGColor
+        backgroundGradient.colors = [colorTop, colorBottom]
+        backgroundGradient.locations = [0.0, 1.0]
+        backgroundGradient.frame = view.frame
+        view.layer.insertSublayer(backgroundGradient, atIndex: 0)
+    }
 }

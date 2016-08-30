@@ -41,4 +41,16 @@ struct constants {
         static let rightAnswerOne = 300
         static let rightAnswerTwo = 150
     }
+    
+    struct revoltijo {
+        static let cifra1 = "9"
+        static let cifra2 = "4"
+        static let cifra3 = "0"
+        static let cifra4 = "9"
+        static let cifra5 = "1"
+        static let cifraCorrecta1 = "4"
+        static let cifraCorrecta2 = "9"
+        static let cifraCorrecta3 = "9"
+        static let cifraCorrecta4 = "0"
+    }
 }

@@ -22,6 +22,9 @@
 		B988DFBA1D6BD0340022C240 /* swapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFB91D6BD0340022C240 /* swapViewController.swift */; };
 		B988DFBC1D6BE22C0022C240 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B988DFBB1D6BE22C0022C240 /* constants.swift */; };
 		B988DFC11D6F67980022C240 /* Rollmops.otf in Resources */ = {isa = PBXBuildFile; fileRef = B988DFBF1D6F64EF0022C240 /* Rollmops.otf */; };
+		B9E147F31D70E92D00C55CAD /* gamesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E147F21D70E92D00C55CAD /* gamesMenuViewController.swift */; };
+		B9E147F51D71F70900C55CAD /* pathFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E147F41D71F70900C55CAD /* pathFinderViewController.swift */; };
+		B9E147F71D74E13D00C55CAD /* revoltijoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E147F61D74E13D00C55CAD /* revoltijoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		B988DFB91D6BD0340022C240 /* swapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swapViewController.swift; sourceTree = "<group>"; };
 		B988DFBB1D6BE22C0022C240 /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		B988DFBF1D6F64EF0022C240 /* Rollmops.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rollmops.otf; sourceTree = "<group>"; };
+		B9E147F21D70E92D00C55CAD /* gamesMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamesMenuViewController.swift; sourceTree = "<group>"; };
+		B9E147F41D71F70900C55CAD /* pathFinderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pathFinderViewController.swift; sourceTree = "<group>"; };
+		B9E147F61D74E13D00C55CAD /* revoltijoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = revoltijoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,9 @@
 				B96849611D6420E80065B3F6 /* KDCircularProgress.swift */,
 				B968495F1D63F4150065B3F6 /* cronometro.swift */,
 				B91773B11D58F2010018B68B /* Main.storyboard */,
+				B9E147F21D70E92D00C55CAD /* gamesMenuViewController.swift */,
+				B9E147F61D74E13D00C55CAD /* revoltijoViewController.swift */,
+				B9E147F41D71F70900C55CAD /* pathFinderViewController.swift */,
 				B988DFBB1D6BE22C0022C240 /* constants.swift */,
 				B988DFB91D6BD0340022C240 /* swapViewController.swift */,
 				B988DFB71D6B623D0022C240 /* moreOrLessViewController.swift */,
@@ -292,13 +301,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E147F51D71F70900C55CAD /* pathFinderViewController.swift in Sources */,
 				B91773DC1D594BDD0018B68B /* AtinarViewController.swift in Sources */,
 				B96849621D6420E90065B3F6 /* KDCircularProgress.swift in Sources */,
 				B988DFBC1D6BE22C0022C240 /* constants.swift in Sources */,
 				B97867C91D655056004523ED /* rightOrderViewController.swift in Sources */,
 				B988DFB81D6B623D0022C240 /* moreOrLessViewController.swift in Sources */,
 				B91773B01D58F2010018B68B /* ViewController.swift in Sources */,
+				B9E147F31D70E92D00C55CAD /* gamesMenuViewController.swift in Sources */,
 				B988DFBA1D6BD0340022C240 /* swapViewController.swift in Sources */,
+				B9E147F71D74E13D00C55CAD /* revoltijoViewController.swift in Sources */,
 				B91773AE1D58F2010018B68B /* AppDelegate.swift in Sources */,
 				B96849601D63F4150065B3F6 /* cronometro.swift in Sources */,
 			);
